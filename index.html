@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<button id="myButton">Click me!</button>
+
+<!-- Список для делегирования событий -->
+<ul id="testList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+<!-- Подключение модульного скрипта -->
+<script type="module">
+    import { handleButtonClick, trackMousePosition, setupEventDelegation } from './js/main.js';
+
+    // Установка обработчика для кнопки
+    handleButtonClick('myButton', 'Button clicked!');
+
+    // Запуск отслеживания позиции мыши
+    trackMousePosition();
+
+    // Установка делегирования событий для списка
+    setupEventDelegation('#testList');
+</script>
+</body>
+</html>
